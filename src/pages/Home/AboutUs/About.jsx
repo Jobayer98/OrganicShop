@@ -13,7 +13,7 @@ const About = () => {
         style={{ backgroundImage: `url(${img})` }}
       ></div>
       <div className="bg-transparent w-1/2 flex flex-col gap-3 -ml-28">
-        <p className="font-[Yellowtail] text-[#7EB693] text-xl">About Us</p>
+        <p className="font-[Yellowtail] text-[#7EB693] text-2xl">About Us</p>
         <h3 className="text-[#274c5b] text-4xl font-bold">
           We Believe in Working <br /> Accredited Farmers
         </h3>

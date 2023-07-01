@@ -2,7 +2,7 @@ import { Rating } from "@mui/material";
 
 const Card = ({ label, img, title, price }) => {
   return (
-    <div className="border shadow rounded-xl">
+    <div className="border hover:shadow-xl rounded-xl">
       <p className="bg-[#274c5b] text-white text-center rounded-md w-fit px-2 py-1 mt-4 ml-6">
         {label}
       </p>

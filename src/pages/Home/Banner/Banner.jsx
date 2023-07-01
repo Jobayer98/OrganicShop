@@ -8,7 +8,9 @@ const Banner = () => {
       style={{ backgroundImage: `url(${banner})` }}
     >
       <div>
-        <p className="font-[Yellowtail] text-[#68A47F]">100% Natural Food</p>
+        <p className="font-[Yellowtail] text-[#68A47F] text-2xl">
+          100% Natural Food
+        </p>
         <h2 className="text-7xl font-extrabold">
           Choose the best <br />
           healthier way <br /> of life
