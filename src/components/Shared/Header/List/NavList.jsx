@@ -1,7 +1,7 @@
 const NavList = () => {
   return (
     <nav>
-      <ul className="flex items-center gap-4 font-semibold">
+      <ul className="flex items-center gap-8 font-semibold">
         <li>
           <a href="">Home</a>
         </li>

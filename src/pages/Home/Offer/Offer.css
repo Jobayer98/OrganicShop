@@ -1,0 +1,18 @@
+.offerCard {
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  border-radius: 16px;
+  opacity: 0.1;
+}
+
+.offer_text {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 32px;
+}
