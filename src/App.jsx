@@ -1,4 +1,5 @@
 import Header from "./components/Shared/Header/Header";
+import About from "./pages/Home/AboutUs/About";
 import Banner from "./pages/Home/Banner/Banner";
 import Offer from "./pages/Home/Offer/Offer";
 
@@ -8,6 +9,7 @@ const App = () => {
       <Header />
       <Banner />
       <Offer />
+      <About />
     </div>
   );
 };
