@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import logo from "../../../assets/Logo.png";
@@ -8,7 +7,7 @@ const Header = () => {
     <header className="flex items-center justify-around my-6 gap-24 px-12">
       <div className="flex items-center justify-center gap-1">
         <img className="h-8" src={logo} alt="organick" />
-        <Typography variant="h6">Organick</Typography>
+        <h1 className="text-2xl font-bold">Organick</h1>
       </div>
       <NavList />
       <div className="flex items-center gap-4 justify-end w-[35%]">

@@ -1,11 +1,11 @@
 import img from "../../../assets/Home/Banner/banner5.jpg";
 const Our = () => {
   return (
-    <div className="flex justify-center items-center relative shadow">
+    <div className="flex justify-center items-center relative">
       <figure className="w-full">
         <img className="h-[550px] w-1/2" src={img} alt="about" />
       </figure>
-      <div className="absolute left-[550px] bg-white p-8 rounded-xl">
+      <div className="absolute left-[550px] bg-white p-8 rounded-xl shadow">
         <p className="font-[Yellowtail] text-[#68A47F] text-2xl">
           Eco Friendly
         </p>
