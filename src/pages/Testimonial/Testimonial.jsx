@@ -4,7 +4,7 @@ import { Rating } from "@mui/material";
 import Chart from "./Chart/Chart";
 const Testimonial = () => {
   return (
-    <div className="testimonial h-[600px] flex flex-col justify-center items-center gap-6 mt-[150px] mb-12">
+    <div className="testimonial h-[680px] flex flex-col justify-center items-center gap-6 mt-[150px]">
       <div className="text-center">
         <p className="font-[Yellowtail] text-[#68A47F] text-2xl">Testimonial</p>
         <h2 className="text-[#274c5b] text-4xl font-bold my-3">
@@ -15,7 +15,7 @@ const Testimonial = () => {
         <figure>
           <img className="rounded-full mb-4" src={user} alt="user" />
         </figure>
-        <Rating value={5} readOnly />
+        <Rating size="small" value={5} readOnly />
 
         <p className="w-[55%] mt-4 text-[#525C60]">
           Simply dummy text of the printing and typesetting industry. Lorem

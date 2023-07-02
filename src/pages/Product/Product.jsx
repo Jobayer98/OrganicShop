@@ -13,7 +13,7 @@ const Product = () => {
           Our Products
         </h3>
       </div>
-      <div className="grid grid-cols-4 gap-6 mx-24">
+      <div className="grid grid-cols-3 gap-10 mx-28">
         {array.map((item) => (
           <Card
             key={item}
