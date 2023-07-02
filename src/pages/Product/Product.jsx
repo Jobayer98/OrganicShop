@@ -24,7 +24,7 @@ const Product = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-8">
         <Button className={"w-[150px] bg-[#274c5b] text-white"}>
           Explore Now{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />

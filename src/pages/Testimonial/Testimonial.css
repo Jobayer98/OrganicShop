@@ -1,0 +1,7 @@
+.testimonial {
+  background-size: 20%;
+  background-image: url("../../assets/Home/Banner/banner7.png"),
+    url("../../assets/Home/Banner/banner4.png");
+  background-repeat: no-repeat;
+  background-position: left, right;
+}
