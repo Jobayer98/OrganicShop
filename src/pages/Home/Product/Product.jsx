@@ -1,10 +1,10 @@
-import Card from "../../components/UI/Card/Card";
-import img from "../../assets/Home/Product/pdc1.png";
-import Button from "../../components/UI/Buttons/Button";
+import Card from "../../../components/UI/Card/Card";
+import img from "../../../assets/Home/Product/pdc1.png";
+import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const Product = () => {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8];
+  const array = [1, 2, 3, 4, 5, 6];
   return (
     <div className="my-24">
       <div className="text-center">

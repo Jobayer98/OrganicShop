@@ -1,5 +1,5 @@
 import "./Testimonial.css";
-import user from "../../assets/Home/img/user.png";
+import user from "../../../assets/Home/img/user.png";
 import { Rating } from "@mui/material";
 import Chart from "./Chart/Chart";
 const Testimonial = () => {
