@@ -2,13 +2,14 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import logo from "../../../assets/Logo.png";
 import NavList from "./List/NavList";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="flex items-center justify-around my-6 gap-24 px-12">
-      <div className="flex items-center justify-center gap-1">
+      <Link to="/" className="flex items-center justify-center gap-1">
         <img className="h-8" src={logo} alt="organick" />
         <h1 className="text-2xl font-bold">Organick</h1>
-      </div>
+      </Link>
       <NavList />
       <div className="flex items-center gap-4 justify-end w-[35%]">
         <div className="relative flex-1">

@@ -1,21 +1,23 @@
+import { NavLink } from "react-router-dom";
+
 const NavList = () => {
   return (
     <nav>
       <ul className="flex items-center gap-8 font-semibold">
         <li>
-          <a href="">Home</a>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <a href="">Shop</a>
+          <NavLink to="/shop">Shop</NavLink>
         </li>
         <li>
-          <a href="">Projects</a>
+          <NavLink to="/projects">Projects</NavLink>
         </li>
         <li>
-          <a href="">About</a>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <a href="">News</a>
+          <NavLink to="/news">News</NavLink>
         </li>
       </ul>
     </nav>
