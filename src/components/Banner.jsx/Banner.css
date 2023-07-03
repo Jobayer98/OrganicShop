@@ -1,0 +1,11 @@
+.about_banner {
+  background-repeat: no-repeat;
+  background-size: 70%, 75%;
+  background-position: left, right;
+}
+
+.shop_banner {
+  background-repeat: no-repeat;
+  background-size: 60%, 55%;
+  background-position: left, right;
+}

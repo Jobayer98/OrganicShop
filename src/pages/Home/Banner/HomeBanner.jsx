@@ -1,11 +1,11 @@
-import banner from "../../../assets/Home/Banner/image.png";
+import img from "../../../assets/Home/Banner/Image.png";
 import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
-const Banner = () => {
+const HomeBanner = () => {
   return (
     <div
       className="bg-[#f1eff0] h-[520px] flex flex-col justify-center bg-center bg-cover pl-20"
-      style={{ backgroundImage: `url(${banner})` }}
+      style={{ backgroundImage: `url(${img})` }}
     >
       <div>
         <p className="font-[Yellowtail] text-[#68A47F] text-2xl">
@@ -24,4 +24,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default HomeBanner;

@@ -1,11 +1,10 @@
-import img from "../../../assets/Home/Banner/about.png";
-import vegan from "../../../assets/Home/img/vegan.png";
-import mail from "../../../assets/Home/img/mail.png";
-import "./About.css";
-import Card from "./Card";
+import img from "../../../assets/About/Banner/banner1.png";
+import tractor from "../../../assets/About/img/Tractor.png";
+import chemical from "../../../assets/About/img/Chemical.png";
 import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
-const About = () => {
+
+const AboutUs = () => {
   return (
     <div className="flex justify-center items-center bg-[#f9f8f8] p-12">
       <div
@@ -23,20 +22,10 @@ const About = () => {
           when an unknown printer took a galley.
         </p>
         <div className="flex flex-col gap-2">
-          <Card img={vegan}>
-            <h1 className="text-lg font-bold">Organic Foods Only</h1>
-            <p className="text-sm text-[#525C60]">
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum
-            </p>
-          </Card>
-          <Card img={mail}>
-            <h1 className="text-lg font-bold">Organic Foods Only</h1>
-            <p className="text-sm text-[#525C60]">
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum
-            </p>
-          </Card>
+          <div className="flex items-center gap-3">
+            <img src={tractor} alt="tractor" />
+            <h3 className="text-lg font-bold">Modern Agriculture Equipment</h3>
+          </div>
         </div>
         <Button className={"w-[150px] bg-[#274c5b] text-white"}>
           Explore Now{" "}
@@ -47,4 +36,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutUs;

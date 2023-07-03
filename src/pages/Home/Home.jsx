@@ -1,4 +1,4 @@
-import Banner from "./Banner/Banner";
+import HomeBanner from "./Banner/HomeBanner";
 import Offer from "./Offer/Offer";
 import About from "./AboutUs/About";
 import Product from "./Product/Product";
@@ -11,8 +11,8 @@ import Subscribe from "./Subscribe/Subscribe";
 
 const HomePage = () => {
   return (
-    <div>
-      <Banner />
+    <div className="max-w-screen-xl mx-auto">
+      <HomeBanner />
       <Offer />
       <About />
       <Product />
