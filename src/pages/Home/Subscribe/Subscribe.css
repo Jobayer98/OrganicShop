@@ -1,0 +1,12 @@
+.subscribe {
+  height: 250px;
+  width: 76%;
+  border-radius: 16px;
+  margin: 32px auto;
+
+  background-image: url("../../../assets/Home/Banner/banner6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
