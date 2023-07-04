@@ -16,7 +16,7 @@ const HomeBanner = () => {
           healthier way <br /> of life
         </h2>
       </div>
-      <Button className={"w-[150px] bg-[#EFD372] text-[#274c5b]"}>
+      <Button className={"w-[150px] mt-8 bg-[#EFD372] text-[#274c5b]"}>
         Explore Now{" "}
         <BsArrowRightShort className="bg-[#274c5b] text-white rounded-full ml-1" />
       </Button>

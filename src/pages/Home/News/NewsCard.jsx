@@ -16,7 +16,7 @@ const NewsCard = ({ img, title }) => {
         <p className="text-sm -mb-3">
           Simply dummy text of the printing and typesetting industry.
         </p>
-        <Button className="w-[140px] bg-[#EFD372] text-[#274c5b] text-sm">
+        <Button className="w-[140px] mt-8 bg-[#EFD372] text-[#274c5b] text-sm">
           More News{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
         </Button>

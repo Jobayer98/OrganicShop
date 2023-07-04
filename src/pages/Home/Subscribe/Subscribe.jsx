@@ -15,7 +15,7 @@ const Subscribe = () => {
           type="email"
           placeholder="Your Email Address"
         />
-        <Button className="bg-[#274C5B] rounded-xl text-white mt-0 px-5">
+        <Button className="bg-[#274C5B] rounded-xl text-white px-5">
           Subscribe
         </Button>
       </div>

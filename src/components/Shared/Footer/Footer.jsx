@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center text-sm text-gray-500 mt-8 mb-1">
-        <p>Copyright Organick - 2023</p>
+        <p>Copyright &copy; Organick - 2023</p>
       </div>
     </footer>
   );

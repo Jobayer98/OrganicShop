@@ -1,7 +1,6 @@
 import img from "../../../assets/Home/Banner/about.png";
 import vegan from "../../../assets/Home/img/vegan.png";
 import mail from "../../../assets/Home/img/mail.png";
-import "./About.css";
 import Card from "./Card";
 import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
@@ -38,7 +37,7 @@ const About = () => {
             </p>
           </Card>
         </div>
-        <Button className={"w-[150px] bg-[#274c5b] text-white"}>
+        <Button className={"w-[150px] mt-8 bg-[#274c5b] text-white"}>
           Explore Now{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
         </Button>
