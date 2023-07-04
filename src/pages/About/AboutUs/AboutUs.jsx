@@ -7,7 +7,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const AboutUs = () => {
   return (
-    <div className="flex justify-center items-center bg-[#f9f8f8] p-12 mt-24">
+    <div className="flex justify-center items-center p-12 my-24">
       <div
         className="about_about w-1/2 bg-[110%]"
         style={{ backgroundImage: `url(${img})` }}

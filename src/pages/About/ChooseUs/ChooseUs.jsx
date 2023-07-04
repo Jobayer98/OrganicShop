@@ -8,10 +8,8 @@ import ChooseCard from "./ChooseCard/ChooseCard";
 const ChooseUs = () => {
   return (
     <>
-      <div className="flex flex-row-reverse justify-center items-center">
-        <div>
-          <img className="h-96 rounded-xl" src={img} alt="" />
-        </div>
+      <div className="flex flex-row-reverse justify-center items-center pt-24 bg-[#F9F8F8]">
+        <img className="h-96 rounded-xl" src={img} alt="" />
         <div className="bg-transparent w-1/2 flex flex-col gap-3 lg:ml-12">
           <p className="font-[Yellowtail] text-[#7EB693] text-2xl">
             Why Choose Us?
@@ -48,7 +46,7 @@ const ChooseUs = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center gap-8 mt-12 py-12 bg-[#F9F8F8]">
+      <div className="flex justify-center gap-8 py-20 bg-[#F9F8F8]">
         <ChooseCard
           img={rtn_policy}
           title="Return Policy"
