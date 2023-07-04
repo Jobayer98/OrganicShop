@@ -1,6 +1,7 @@
 import AboutUs from "./AboutUs/AboutUs";
 import AboutBanner from "./Banner/AboutBanner";
 import ChooseUs from "./ChooseUs/ChooseUs";
+import AboutOffer from "./Offer/AboutOffer";
 import OurTeam from "./OurTeam/OurTeam";
 
 const AboutPage = () => {
@@ -10,6 +11,7 @@ const AboutPage = () => {
       <AboutUs />
       <ChooseUs />
       <OurTeam />
+      <AboutOffer />
     </div>
   );
 };
