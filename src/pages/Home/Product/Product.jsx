@@ -6,7 +6,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 const Product = () => {
   const array = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="my-24">
+    <div className="my-24 py-12">
       <div className="text-center">
         <p className="text-[#7EB693] font-[Yellowtail] text-3xl ">Categories</p>
         <h3 className="text-[#274C5B] text-4xl font-bold my-3 mb-8">
@@ -25,7 +25,7 @@ const Product = () => {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <Button className={"w-[150px] bg-[#274c5b] text-white"}>
+        <Button className={"w-[150px] mt-4 bg-[#274c5b] text-white"}>
           Explore Now{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
         </Button>

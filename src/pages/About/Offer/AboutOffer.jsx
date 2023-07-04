@@ -1,9 +1,11 @@
 import React from "react";
 import AboutOfferCard from "./Card/AboutOfferCard";
-import img from "../../../assets/About/product/spicy.png";
+import spicy from "../../../assets/About/product/spicy.png";
+import nuts from "../../../assets/About/product/nuts.png";
+import fruits from "../../../assets/About/product/fruits.png";
+import vegetables from "../../../assets/About/product/vegetable.png";
 
 const AboutOffer = () => {
-  const array = [1, 2, 3, 4];
   return (
     <div className="h-[680px] bg-[#274C5B] flex flex-col justify-center gap-8 px-32 py-4">
       <div className="text-center">
@@ -13,9 +15,10 @@ const AboutOffer = () => {
         </h3>
       </div>
       <div className="flex gap-6 justify-center items-center">
-        {array.map((item) => (
-          <AboutOfferCard key={item} img={img} pd_name="Spicy" />
-        ))}
+        <AboutOfferCard img={spicy} pd_name="Spicy" />
+        <AboutOfferCard img={nuts} pd_name="Nuts" />
+        <AboutOfferCard img={fruits} pd_name="Fruits" />
+        <AboutOfferCard img={vegetables} pd_name="Vegetables" />
       </div>
     </div>
   );

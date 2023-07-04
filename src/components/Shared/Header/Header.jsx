@@ -5,7 +5,7 @@ import NavList from "./List/NavList";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header className="flex items-center justify-around my-6 gap-24 px-12">
+    <header className="sm:flex items-center justify-around my-6 gap-24 px-12 hidden">
       <Link to="/" className="flex items-center justify-center gap-1">
         <img className="h-8" src={logo} alt="organick" />
         <h1 className="text-2xl font-bold">Organick</h1>
