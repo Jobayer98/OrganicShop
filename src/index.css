@@ -30,6 +30,10 @@ body {
   background-size: 110%;
   background-repeat: no-repeat;
 }
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 /*
   color:#274C5B
   color:#7EB693
