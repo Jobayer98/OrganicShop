@@ -13,9 +13,9 @@ const ProductInfo = () => {
     return;
   };
   return (
-    <div className="w-[40%]">
+    <div className="w-[90%] md:w-[50%]">
       <div className="flex flex-col gap-2 mb-3">
-        <h2 className="text-3xl font-bold">Health Pistachios</h2>
+        <h2 className="text-xl md:text-3xl font-bold">Health Pistachios</h2>
         <Rating size="small" readOnly value={5} />
 
         <p className="text-xl font-bold">
@@ -33,7 +33,7 @@ const ProductInfo = () => {
         when an unknown printer took a galley.
       </p>
 
-      <div className="flex items-center gap-4 mt-8">
+      <div className="flex items-center gap-2 lg:gap-4 mt-8">
         <p className="text-xl font-semibold">Quantity: </p>
         <div className="flex items-center gap-2">
           <button

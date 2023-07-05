@@ -7,7 +7,7 @@ const ProductImage = () => {
         {"Millets"}
       </p>
       <figure>
-        <img className="rounded-2xl h-96" src={product} alt="product" />
+        <img className="rounded-2xl h-52 lg:h-96" src={product} alt="product" />
       </figure>
     </div>
   );
