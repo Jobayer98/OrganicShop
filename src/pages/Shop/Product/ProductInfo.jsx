@@ -13,7 +13,7 @@ const ProductInfo = () => {
     return;
   };
   return (
-    <div className="w-[90%] md:w-[50%]">
+    <div className="w-[90%] md:w-[50%] lg:w-[40%]">
       <div className="flex flex-col gap-2 mb-3">
         <h2 className="text-xl md:text-3xl font-bold">Health Pistachios</h2>
         <Rating size="small" readOnly value={5} />
@@ -27,7 +27,7 @@ const ProductInfo = () => {
           ${15}
         </p>
       </div>
-      <p>
+      <p className="2xl:w-[80%]">
         Simply dummy text of the printing and typesetting industry. Lorem had
         ceased to been the industry's standard dummy text ever since the 1500s,
         when an unknown printer took a galley.
