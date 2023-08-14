@@ -4,7 +4,7 @@ import { Rating } from "@mui/material";
 import Chart from "./Chart/Chart";
 const Testimonial = () => {
   return (
-    <div className="testimonial h-[680px] flex flex-col justify-center items-center gap-6 mt-[150px]">
+    <div className="testimonial h-[680px] flex flex-col justify-center items-center gap-6">
       <div className="text-center">
         <p className="font-[Yellowtail] text-[#68A47F] text-2xl">Testimonial</p>
         <h2 className="text-[#274c5b] text-4xl font-bold my-3">

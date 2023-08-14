@@ -6,19 +6,18 @@ import img from "../../../assets/Home/Product/pdc3.png";
 const Products = () => {
   const ary = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
-    <div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-    xl:grid-cols-4 2xl:grid-cols-5 gap-6 justify-center justify-items-center mx-auto md:mx-20 lg:mx-16 xl:mx-10 2xl:mx-48 mt-20"
-    >
-      {ary.map((item) => (
-        <Card
-          key={item}
-          img={img}
-          title="White Nuts"
-          price="15"
-          label="Millets"
-        />
-      ))}
+    <div className="my-24 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        {ary.map((item) => (
+          <Card
+            key={item}
+            img={img}
+            title="White Nuts"
+            price="15"
+            label="Millets"
+          />
+        ))}
+      </div>
     </div>
   );
 };

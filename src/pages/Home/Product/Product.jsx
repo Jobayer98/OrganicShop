@@ -4,19 +4,16 @@ import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const Product = () => {
-  const array = [1, 2, 3, 4, 5, 6];
+  const array = [1, 2, 3, 4];
   return (
-    <div className="my-24 py-12">
+    <div className="my-12 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div className="text-center">
         <p className="text-[#7EB693] font-[Yellowtail] text-3xl ">Categories</p>
         <h3 className="text-[#274C5B] text-4xl font-bold my-3 mb-8">
           Our Products
         </h3>
       </div>
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-    xl:grid-cols-4 2xl:grid-cols-5 gap-6 justify-center justify-items-center mx-auto md:mx-20 lg:mx-16 xl:mx-10 2xl:mx-48 mt-20"
-      >
+      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {array.map((item) => (
           <Card
             key={item}
