@@ -1,4 +1,4 @@
-import BannerComponent from "../../../components/Banner.jsx/Banner";
+import BannerComponent from "../../../components/Banner/Banner";
 import img1 from "../../../assets/Shop/banner/banner1.png";
 import img2 from "../../../assets/Shop/banner/banner2.png";
 

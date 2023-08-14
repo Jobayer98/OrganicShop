@@ -1,6 +1,6 @@
 import img1 from "../../../assets/About/Banner/banner1.png";
 import img2 from "../../../assets/About/Banner/banner2.png";
-import BannerComponent from "../../../components/Banner.jsx/Banner";
+import BannerComponent from "../../../components/Banner/Banner";
 const AboutBanner = () => {
   return (
     <BannerComponent

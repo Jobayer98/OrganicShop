@@ -1,4 +1,4 @@
-import BannerComponent from "../../../../components/Banner.jsx/Banner";
+import BannerComponent from "../../../../components/Banner/Banner";
 import img from "../../../../assets/Shop/banner/s_banner.png";
 
 const ProductBanner = () => {
