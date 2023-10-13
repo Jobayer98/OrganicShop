@@ -1,16 +1,28 @@
 import { Rating } from "@mui/material";
 import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../context/cartContext";
+import { useParams } from "react-router-dom";
+import useFetch from "../../../hooks/useFetch";
+import { ProductContext } from "../../../context/ProductContext";
 
 const ProductInfo = () => {
+  const { name } = useParams();
+  useFetch(`products/${name}`);
+  const { addToCart } = useContext(CartContext);
   const [qunatity, setQuantity] = useState(1);
+  const { products } = useContext(ProductContext);
 
   const handleDecrement = () => {
     if (qunatity > 1) {
       return setQuantity((preValue) => preValue - 1);
     }
     return;
+  };
+
+  const handleClick = () => {
+    addToCart(pro);
   };
   return (
     <div className="w-[90%] md:w-[50%] lg:w-[40%]">
@@ -59,10 +71,13 @@ const ProductInfo = () => {
             +
           </button>
         </div>
-        <Button className={"w-[150px] bg-[#274c5b] text-white"}>
+        <button
+          onClick={handleClick}
+          className="w-[150px] bg-[#274c5b] text-white px-2 py-1 md:px-4 md:py-3 text-sm md:text-base rounded-md md:rounded-xl flex justify-center items-center md:font-semibold"
+        >
           Add To Cart{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
-        </Button>
+        </button>
       </div>
     </div>
   );

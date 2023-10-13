@@ -1,13 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Filter = () => {
   return (
     <div className="flex justify-between items-center flex-wrap my-8">
       <div className="text-sm breadcrumbs mb-1 md:mb-0">
         <ul>
           <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Shop</a>
+            <Link to="/">Home</Link>
           </li>
           <li>Category</li>
         </ul>

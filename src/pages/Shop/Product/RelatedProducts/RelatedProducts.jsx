@@ -11,9 +11,11 @@ const RelatedProducts = () => {
           <Card
             key={item}
             img={img}
-            title="White Nuts"
-            price="15"
-            label="Millets"
+            item={{
+              name: "Organic Vegetable",
+              price: 20,
+              category: "Vegetable",
+            }}
           />
         ))}
       </div>

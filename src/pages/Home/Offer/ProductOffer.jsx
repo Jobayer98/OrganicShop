@@ -17,9 +17,12 @@ const ProductOffer = () => {
             className="bg-white w-72"
             key={item}
             img={img}
-            label={"Vegetable"}
-            title={"Mung Bean"}
-            price={"11.00"}
+            item={{
+              name: "White Nuts",
+              price: "15",
+              category: "Millets",
+              rating: 4.5,
+            }}
           />
         ))}
       </div>

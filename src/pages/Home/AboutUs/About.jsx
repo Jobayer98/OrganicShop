@@ -2,8 +2,8 @@ import img from "../../../assets/Home/Banner/about.png";
 import vegan from "../../../assets/Home/img/vegan.png";
 import mail from "../../../assets/Home/img/mail.png";
 import Card from "./Card";
-import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="flex justify-center items-center bg-[#f9f8f8] p-12">
@@ -37,10 +37,13 @@ const About = () => {
             </p>
           </Card>
         </div>
-        <Button className={"w-[150px] mt-8 bg-[#274c5b] text-white"}>
+        <Link
+          to="/about"
+          className="bg-[#274c5b] text-white flex justify-center items-center w-[150px] mt-8 py-2 rounded-md"
+        >
           Explore Now{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
-        </Button>
+        </Link>
       </div>
     </div>
   );

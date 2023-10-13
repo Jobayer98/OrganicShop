@@ -2,33 +2,43 @@ import Card from "../../../components/UI/Card/Card";
 import img from "../../../assets/Home/Product/pdc1.png";
 import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
+import useFetch from "../../../hooks/useFetch";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ProductContext } from "../../../context/ProductContext";
 
 const Product = () => {
-  const array = [1, 2, 3, 4];
+  useFetch("/products");
+  const { products, loading, error } = useContext(ProductContext);
+  products.length = 4;
+
+  if (loading) {
+    return <h1 className="text-black">Loading...</h1>;
+  }
+
   return (
     <div className="my-12 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div className="text-center">
-        <p className="text-[#7EB693] font-[Yellowtail] text-3xl ">Categories</p>
+        <p className="text-[#7EB693] font-[Yellowtail] text-3xl ">Products</p>
         <h3 className="text-[#274C5B] text-4xl font-bold my-3 mb-8">
-          Our Products
+          Our New Products
         </h3>
       </div>
+      {error && <h1>Something went wrong</h1>}
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        {array.map((item) => (
-          <Card
-            key={item}
-            img={img}
-            label={"Vegetable"}
-            title={"Calabrese Brocoli"}
-            price={"12.00"}
-          />
-        ))}
+        {products &&
+          products.map((product, i) => (
+            <Card key={i} img={img} item={product} />
+          ))}
       </div>
       <div className="flex justify-center mt-8">
-        <Button className={"w-[150px] mt-4 bg-[#274c5b] text-white"}>
+        <Link
+          to="/about"
+          className="bg-[#274c5b] text-white flex justify-center items-center w-[150px] mt-8 py-2 rounded-md"
+        >
           Explore Now{" "}
           <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
-        </Button>
+        </Link>
       </div>
     </div>
   );

@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "../../../components/UI/Card/Card";
 
 import img from "../../../assets/Home/Product/pdc3.png";
+import useFetch from "../../../hooks/useFetch";
+import { ProductContext } from "../../../context/ProductContext";
+import { useParams } from "react-router-dom";
 
 const Products = () => {
-  const ary = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const { name } = useParams();
+  useFetch(`/products?category=${name}`);
+  const { products, loading, error } = useContext(ProductContext);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Something went wrong</h1>;
+  }
+
   return (
     <div className="mb-8 px-4 lg:px-8">
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 xl:gap-x-8">
-        {ary.map((item) => (
-          <Card
-            key={item}
-            img={img}
-            title="White Nuts"
-            price="15"
-            label="Millets"
-          />
-        ))}
-      </div>
+      {products.length > 0 ? (
+        <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 xl:gap-x-8">
+          {products.map((product, i) => (
+            <Card key={product._id} img={img} item={product} />
+          ))}
+        </div>
+      ) : (
+        <h1 className="text-black text-xl text-center mt-32 ">
+          No Products Found
+        </h1>
+      )}
     </div>
   );
 };

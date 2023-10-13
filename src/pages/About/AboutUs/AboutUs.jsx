@@ -1,9 +1,6 @@
 import img from "../../../assets/About/Banner/about.png";
-import img2 from "../../../assets/About/Banner/banner4.png";
 import tractor from "../../../assets/About/img/Tractor.png";
 import chemical from "../../../assets/About/img/Chemical.png";
-import Button from "../../../components/UI/Buttons/Button";
-import { BsArrowRightShort } from "react-icons/bs";
 
 const AboutUs = () => {
   return (
@@ -36,10 +33,6 @@ const AboutUs = () => {
             </h3>
           </div>
         </div>
-        <Button className={"w-[150px] mt-8 bg-[#274c5b] text-white"}>
-          Explore Now{" "}
-          <BsArrowRightShort className="bg-[#335B6B] text-white rounded-full ml-1" />
-        </Button>
       </div>
     </div>
   );

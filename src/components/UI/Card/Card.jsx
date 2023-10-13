@@ -1,18 +1,20 @@
 import { Rating } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const Card = ({ label, img, title, price, className }) => {
+const Card = ({ item, img }) => {
   return (
-    <div
-      className={`flex flex-col  gap-6 border hover:shadow-xl hover:scale-95 transition-all ease-in-out duration-200 w-full rounded-md relative bg-[#f9f8f8] justify-self-center ${className}`}
+    <Link
+      to={`/shop/${item?.category.toLowerCase()}/${item?.name}`}
+      className={`flex flex-col  gap-6 border hover:shadow-xl hover:scale-95 transition-all ease-in-out duration-200 w-full rounded-md relative bg-[#f9f8f8] justify-self-center`}
     >
       <p className="bg-[#274c5b] absolute top-0 left-0 text-white text-center rounded-md w-fit px-2 py-1 mt-4 ml-6">
-        {label}
+        {item?.category}
       </p>
       <figure className="flex justify-center items-center mt-16 ">
-        <img className="h-52" src={img} alt={title} />
+        <img className="h-52" src={img} alt={item?.name} />
       </figure>
       <div className="text-lg font-bold mx-6 mb-2 mt-6">
-        <h3 className="mb-2">{title}</h3>
+        <h3 className="mb-2">{item?.name}</h3>
         <hr />
         <div className="mt-2 flex justify-between">
           <p>
@@ -21,14 +23,14 @@ const Card = ({ label, img, title, price, className }) => {
                 $20.00
               </strike>
             </span>{" "}
-            ${price}
+            ${item?.price}
           </p>
           <p>
             <Rating size="small" name="read-only" value={5} readOnly />
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
