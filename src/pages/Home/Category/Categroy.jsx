@@ -1,27 +1,63 @@
-import img1 from "../../../assets/Home/Card/card7.jpg";
-import img2 from "../../../assets/Home/Card/card8.jpg";
-import img3 from "../../../assets/Home/Card/card9.jpg";
+import CatCard from "../../../components/UI/Card/catCard";
+
+const catObj = [
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Honeycm.png",
+    name: "Honey",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Gheecm.png",
+    name: "Ghee",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Oilcm.png",
+    name: "Oil",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/10/Gift-Items.png",
+    name: "Gitf Items",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Superfoodcm.png",
+    name: "Super Foods",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Herbalcm.png",
+    name: "Herbal Powders",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Grocerycm.png",
+    name: "Grocery Items",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Spicescm.png",
+    name: "Spices Powders",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Seedscm.png",
+    name: "Seeds",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/otherscm.png",
+    name: "Tea & Snacks",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/09/Nutscm.png",
+    name: "Nuts",
+  },
+  {
+    img: "https://organiconline.com.bd/wp-content/uploads/2021/10/Fish.png",
+    name: "Fish & Meat",
+  },
+];
 const Categroy = () => {
   return (
-    <div className="flex justify-center gap-8 bg-[#F1F8F4] py-20">
-      <figure className="relative flex justify-center items-center">
-        <img className="h-72" src={img1} alt="organic" />
-        <p className="absolute bg-white px-4 py-2 rounded-lg text-[#274c5b] font-semibold">
-          Organic Juice
-        </p>
-      </figure>
-      <figure className="relative flex justify-center items-center">
-        <img className="h-72" src={img2} alt="organic" />
-        <p className="absolute bg-white px-4 py-2 rounded-lg text-[#274c5b] font-semibold">
-          Organic Food
-        </p>
-      </figure>
-      <figure className="relative flex justify-center items-center">
-        <img className="h-72" src={img3} alt="organic" />
-        <p className="absolute bg-white px-4 py-2 rounded-lg text-[#274c5b] font-semibold">
-          Nuts Cookies
-        </p>
-      </figure>
+    <div>
+      <div className="grid grid-cols-4 lg:grid-cols-6 gap-6 mt-16">
+        {catObj.map((item, index) => (
+          <CatCard key={index} item={item} />
+        ))}
+      </div>
     </div>
   );
 };

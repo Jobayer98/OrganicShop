@@ -1,0 +1,14 @@
+.leftbtn {
+    animation: leftBtnAnimation 500ms 500ms;
+}
+
+@keyframes leftBtnAnimation {
+    0% {
+        visibility: hidden;
+        transform: translateX(-50%);
+    }
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}

@@ -13,13 +13,13 @@ const HomePage = () => {
   return (
     <div className="max-w-screen-xl mx-auto">
       <HomeBanner />
+      <Categroy />
       <Offer />
       <About />
       <Product />
       <Testimonial />
       <ProductOffer />
       <Our />
-      <Categroy />
       <News />
       <Subscribe />
     </div>
