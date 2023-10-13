@@ -5,7 +5,7 @@ import NavList from "./List/NavList";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header className="sm:flex items-center justify-around my-6 gap-24 px-12 hidden">
+    <header className="sm:flex items-center justify-around py-6 gap-24 px-12 hidden sticky top-0 bg-[#EFF6F1] drop-shadow z-50">
       <Link to="/" className="flex items-center justify-center gap-1">
         <img className="h-8" src={logo} alt="organick" />
         <h1 className="text-2xl font-bold">Organick</h1>
@@ -26,6 +26,14 @@ const Header = () => {
             <AiOutlineShoppingCart className="text-3xl text-white font-extrabold bg-[#274C5B] rounded-full p-1" />
             <span>Cart 0</span>
           </button>
+        </div>
+        <div>
+          <Link
+            className="text-lg drop-shadow-xl py-2 px-3 rounded-full hover:bg-[#274C5B] hover:text-white transition-all duration-500 ease-in-out"
+            to="/login"
+          >
+            Login
+          </Link>
         </div>
       </div>
     </header>

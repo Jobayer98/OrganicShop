@@ -8,16 +8,10 @@ const NavList = () => {
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
-          <NavLink to="/shop">Shop</NavLink>
-        </li>
-        <li>
-          <NavLink to="/projects">Projects</NavLink>
-        </li>
+        <DropDown />
         <li>
           <NavLink to="/about">About</NavLink>
         </li>
-        <DropDown />
         <li>
           <NavLink to="/news">News</NavLink>
         </li>
