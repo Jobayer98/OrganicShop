@@ -3,14 +3,15 @@ import { FaFacebook, FaPinterest } from "react-icons/fa";
 import logo from "../../../assets/Logo.png";
 const Footer = () => {
   return (
-    <footer>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-start justify-items-center mx-36 mt-40">
+    <footer className="bg-[#647075]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-start justify-items-center mx-36 mt-12 pt-6">
         <div className="flex flex-col justify-center items-start gap-4">
           <div className="flex justify-center items-start gap-2">
             <img className="h-8" src={logo} alt="logo" />
+
             <h1 className="text-2xl font-bold">Organick</h1>
           </div>
-          <p className="text-gray-500">
+          <p className="text-gray-50">
             Simply dummy text of the printing and typesetting industry. Lorem
             Ipsum simply dummy text of the printing
           </p>
@@ -32,7 +33,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold">Important Links</h3>
-          <ul className="flex flex-col gap-1 text-gray-500">
+          <ul className="flex flex-col gap-1 text-gray-50">
             <li>
               <a href="#">Home</a>
             </li>
@@ -50,7 +51,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold">Contact Us</h3>
-          <ul className="flex flex-col gap-1 text-gray-500">
+          <ul className="flex flex-col gap-1 text-gray-50">
             <li>
               <p className="text-sm font-semibold">Email</p>
               <span className="text-sm">organic@gmail.com</span>
@@ -66,7 +67,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center text-sm text-gray-500 mt-8 mb-1">
+      <div className="text-center text-sm text-gray-50 mt-8 mb-1">
         <p>Copyright &copy; Organick - 2023</p>
       </div>
     </footer>
