@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import DropDown from "./DropDown";
 
 const NavList = () => {
   return (
@@ -16,6 +17,7 @@ const NavList = () => {
         <li>
           <NavLink to="/about">About</NavLink>
         </li>
+        <DropDown />
         <li>
           <NavLink to="/news">News</NavLink>
         </li>
