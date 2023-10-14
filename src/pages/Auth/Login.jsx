@@ -2,29 +2,35 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import axios from "../../utils/axios";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../context/Usercontext";
 
-const notify = () => toast.success("Login successfully");
-
 function Login() {
-  const { storeUserInfo } = useContext(UserContext);
+  const [loding, setLoding] = useState(false);
+  const { login } = useContext(UserContext);
   const { register, handleSubmit } = useForm();
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.form?.pathname || "/user/profile";
   const onSubmit = async (data) => {
     try {
+      setLoding(true);
       const response = await axios.post("/login", data);
       if (response.data) {
+        const notify = () => toast.success("Login successfully");
         notify();
-        storeUserInfo(response.data.data);
+        localStorage.setItem("token", response.data.token);
+        login(response.data.data);
         navigate(from, { replace: true });
       }
+      setLoding(false);
     } catch (error) {
-      console.error(error);
+      const notify = () => toast.error("Invalid email or password");
+      notify();
+      setLoding(false);
     }
   };
+
   return (
     <section className="flex justify-center pt-12 mb-12">
       <div className="border p-4 rounded shadow-md">
@@ -51,6 +57,7 @@ function Login() {
               className="focus:ring-1 focus:outline-none focus:ring-[#274C5B] w-full h-12 rounded-lg pl-3 text-black border mt-2"
               type="email"
               placeholder="Your email"
+              defaultValue={"one@g.com"}
             />
           </div>
           <div className="my-2">
@@ -63,6 +70,7 @@ function Login() {
               className="focus:ring-1 focus:outline-none focus:ring-[#274C5B] w-full h-12 rounded-lg pl-3 text-black border mt-2"
               type="password"
               placeholder="Password"
+              defaultValue={"123456"}
             />
           </div>
           <Link className="text-[#274C5B]" to="/reset-password">
@@ -72,7 +80,8 @@ function Login() {
             <input
               className="uppercase bg-[#274C5B] hover:bg-[#326072] font-medium text-white rounded-full w-1/2 py-[10px] cursor-pointer transition-all duration-500 ease-in-out"
               type="submit"
-              value="Login"
+              value={`${loding ? "Loading..." : "Login"}`}
+              disabled={loding}
             />
           </div>
         </form>

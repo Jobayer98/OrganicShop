@@ -20,6 +20,7 @@ function SignUp() {
       const response = await axios.post("/signup", data);
       if (response.data) {
         notify();
+        localStorage.setItem("token", response.data.data.token);
         storeUserInfo(response.data.data);
         navigate(from, { replace: true });
       }

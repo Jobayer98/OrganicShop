@@ -12,7 +12,7 @@ const Header = () => {
       </Link>
       <NavList />
       <div className="flex items-center gap-4 justify-end w-[35%]">
-        <div className="relative flex-1">
+        <div className="relative flex-1 hidden">
           <BiSearch className="absolute bg-[#7EB693] text-white text-4xl top-1 right-1 p-[8px] rounded-full" />
           <input
             className="bg-[#ffffff93] text-gray-600 py-2 pl-4 rounded-full border-2 outline-none w-full"
@@ -21,7 +21,7 @@ const Header = () => {
             id=""
           />
         </div>
-        <div>
+        <div className="hidden">
           <button className="flex justify-center items-center gap-2 border-2  rounded-full px-1 py-1 font-semibold">
             <AiOutlineShoppingCart className="text-3xl text-white font-extrabold bg-[#274C5B] rounded-full p-1" />
             <span>Cart 0</span>

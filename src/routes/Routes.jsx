@@ -8,6 +8,9 @@ import Team from "../pages/Team/Team";
 import Login from "../pages/Auth/Login";
 import SignUp from "../pages/Auth/Signup";
 import Profile from "../pages/User/Profile";
+import PrivateRoute from "./PrivateRoute";
+import UpdateInformation from "../pages/User/updateCom/UpdateInfo";
+import UpdateProfile from "../pages/User/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -36,7 +39,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/user/profile",
-        element: <Profile />,
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/user/profile/update",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

@@ -1,21 +1,33 @@
 import { createContext } from "react";
 
 export const UserContext = createContext({
-  user: {},
-  storeUserInfo: (data) => {},
+  user: null,
+  setUser: () => {},
+  login: (data) => {},
+  logout: () => {},
 });
 
 import { useState } from "react";
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({});
-  const storeUserInfo = (data) => {
+  const [user, setUser] = useState(null);
+
+  const login = (data) => {
     setUser(data);
   };
 
+  const logout = () => {
+    setUser({});
+  };
+
+  const userInfo = {
+    user,
+    setUser,
+    login,
+    logout,
+  };
+
   return (
-    <UserContext.Provider value={{ user, storeUserInfo }}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={userInfo}>{children}</UserContext.Provider>
   );
 };
 
