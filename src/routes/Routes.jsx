@@ -7,6 +7,7 @@ import Product from "../pages/Shop/Product/Product";
 import Team from "../pages/Team/Team";
 import Login from "../pages/Auth/Login";
 import SignUp from "../pages/Auth/Signup";
+import Profile from "../pages/User/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/our-team",
         element: <Team />,
+      },
+      {
+        path: "/user/profile",
+        element: <Profile />,
       },
       {
         path: "/login",
