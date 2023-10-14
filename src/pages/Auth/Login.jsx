@@ -12,7 +12,7 @@ function Login() {
   const { register, handleSubmit } = useForm();
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.form?.pathname || "/";
+  const from = location.state?.form?.pathname || "/user/profile";
   const onSubmit = async (data) => {
     try {
       const response = await axios.post("/login", data);
@@ -26,7 +26,7 @@ function Login() {
     }
   };
   return (
-    <section className="flex justify-center pt-12">
+    <section className="flex justify-center pt-12 mb-12">
       <div className="border p-4 rounded shadow-md">
         <div className="mb-8 my-4">
           <h2 className="text-3xl font-bold">

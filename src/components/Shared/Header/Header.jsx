@@ -35,6 +35,16 @@ const Header = () => {
             Login
           </Link>
         </div>
+        <Link
+          className=" border-4 shadow-lg  rounded-full"
+          to={"/user/profile"}
+        >
+          <img
+            className="w-10 h-10 rounded-full"
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            alt=""
+          />
+        </Link>
       </div>
     </header>
   );

@@ -29,7 +29,7 @@ function SignUp() {
   };
 
   return (
-    <section className="flex justify-center pt-12">
+    <section className="flex justify-center pt-12 mb-12">
       <div className="border p-4 rounded shadow-md">
         <div className="mb-8 my-4">
           <h2 className="text-3xl font-bold">
