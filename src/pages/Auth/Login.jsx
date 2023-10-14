@@ -12,14 +12,13 @@ function Login() {
   const { register, handleSubmit } = useForm();
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.form?.pathname || "/profile";
+  const from = location.state?.form?.pathname || "/";
   const onSubmit = async (data) => {
     try {
       const response = await axios.post("/login", data);
       if (response.data) {
         notify();
         storeUserInfo(response.data.data);
-        localStorage.setItem("token", response.data.token);
         navigate(from, { replace: true });
       }
     } catch (error) {
