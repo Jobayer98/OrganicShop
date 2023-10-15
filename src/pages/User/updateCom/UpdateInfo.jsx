@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { UserContext } from "../../../context/UserContext";
 import axios from "../../../utils/axios";
 import UpdatePhoto from "./UpdatePhoto";
 import UpdatePassword from "./UpdatePassword";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../../context/Usercontext";
 
 const UpdateInformation = () => {
   const { user, setUser } = useContext(UserContext);

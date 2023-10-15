@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../context/Usercontext";
 
 const SideNav = () => {
   const { user } = useContext(UserContext);
@@ -27,7 +27,7 @@ const SideNav = () => {
             Add Product
           </Link>
           <Link to={"/admin/analytic"} className="p-4 border-b block">
-            Analylict
+            Analylics
           </Link>
         </span>
       )}

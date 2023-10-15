@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../context/Usercontext";
 
 function Login() {
+  const [isAdmin, setIsAdmin] = useState(false);
   const [loding, setLoding] = useState(false);
   const { login } = useContext(UserContext);
   const { register, handleSubmit } = useForm();
@@ -56,8 +57,7 @@ function Login() {
               {...register("email", { required: true })}
               className="focus:ring-1 focus:outline-none focus:ring-[#274C5B] w-full h-12 rounded-lg pl-3 text-black border mt-2"
               type="email"
-              placeholder="Your email"
-              defaultValue={"one@g.com"}
+              placeholder="try user@gmail.com or admin@gmail.com"
             />
           </div>
           <div className="my-2">

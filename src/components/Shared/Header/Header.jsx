@@ -5,7 +5,7 @@ import NavList from "./List/NavList";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
-import { UserContext } from "../../../context/UserContext";
+import { UserContext } from "../../../context/Usercontext";
 import UserDropdown from "./UserDropdown";
 
 const Header = () => {
@@ -50,7 +50,7 @@ const Header = () => {
               <img
                 className="w-10 h-10 rounded-full"
                 src={
-                  user?.image.secure_url ||
+                  user?.image?.secure_url ||
                   "https://cdn-icons-png.flaticon.com/512/149/149071.png"
                 }
                 alt=""

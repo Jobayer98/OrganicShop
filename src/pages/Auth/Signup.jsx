@@ -5,10 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../context/Usercontext";
 
-const notify = () => toast.success("Signup successfully");
-
 function SignUp() {
-  const { storeUserInfo } = useContext(UserContext);
+  const { login } = useContext(UserContext);
   const { register, handleSubmit } = useForm();
   const location = useLocation();
   const navigate = useNavigate();
@@ -19,13 +17,15 @@ function SignUp() {
     try {
       const response = await axios.post("/signup", data);
       if (response.data) {
+        const notify = () => toast.success("Signup successfully");
         notify();
-        localStorage.setItem("token", response.data.data.token);
-        storeUserInfo(response.data.data);
+        localStorage.setItem("token", response.data.token);
+        login(response.data.data);
         navigate(from, { replace: true });
       }
     } catch (error) {
-      console.error(error);
+      const notify = () => toast.error(`${error.response.data.msg}`);
+      notify();
     }
   };
 

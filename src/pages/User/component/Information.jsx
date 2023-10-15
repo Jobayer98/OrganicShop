@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../../context/UserContext";
+import { UserContext } from "../../../context/Usercontext";
 import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
 
@@ -19,7 +19,10 @@ const Information = () => {
           <label htmlFor="photo">Your Profile Photo</label>
           <img
             className="mt-2 rounded-full bg-slate-200 w-32 h-32 object-cover"
-            src={user?.image?.secure_url}
+            src={
+              user?.image?.secure_url ||
+              "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            }
             alt="photo"
           />
         </div>
