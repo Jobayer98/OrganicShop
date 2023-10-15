@@ -15,6 +15,7 @@ import Checkout from "../pages/Order/Checkout";
 import Error from "../pages/Error/Error";
 import AdminProducts from "../pages/Admin/AdminProducts/AdminProducts";
 import AddProduct from "../pages/Admin/AdminProducts/AddProduct";
+import UpdateProduct from "../pages/Admin/AdminProducts/UpdateProduct";
 
 export const router = createBrowserRouter([
   {
@@ -79,6 +80,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddProduct />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/admin/product/update/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProduct />
           </PrivateRoute>
         ),
       },

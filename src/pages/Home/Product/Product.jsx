@@ -1,6 +1,5 @@
 import Card from "../../../components/UI/Card/Card";
 import img from "../../../assets/Home/Product/pdc1.png";
-import Button from "../../../components/UI/Buttons/Button";
 import { BsArrowRightShort } from "react-icons/bs";
 import useFetch from "../../../hooks/useFetch";
 import { Link } from "react-router-dom";
