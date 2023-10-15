@@ -9,7 +9,11 @@ const useFetch = (urlPath) => {
     (async () => {
       setLoading(true);
       try {
-        const res = await axios.get(urlPath);
+        const res = await axios.get(urlPath, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
         setProduct(res.data.data);
         setLoading(false);
       } catch (error) {
