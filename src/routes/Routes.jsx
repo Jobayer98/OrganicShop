@@ -9,7 +9,7 @@ import Login from "../pages/Auth/Login";
 import SignUp from "../pages/Auth/Signup";
 import Profile from "../pages/User/Profile";
 import PrivateRoute from "./PrivateRoute";
-import UpdateInformation from "../pages/User/updateCom/UpdateInfo";
+import ShoppingCart from "../pages/Cart/ShoppingCart";
 import UpdateProfile from "../pages/User/UpdateProfile";
 
 export const router = createBrowserRouter([
@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         element: <ShopPage />,
       },
       {
-        path: "/shop/:category/:name",
+        path: "/shop/:category/:id",
         element: <Product />,
       },
       {
@@ -52,6 +52,10 @@ export const router = createBrowserRouter([
             <UpdateProfile />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/cart",
+        element: <ShoppingCart />,
       },
       {
         path: "/login",

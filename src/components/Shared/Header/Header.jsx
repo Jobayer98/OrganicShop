@@ -3,7 +3,11 @@ import { BiSearch } from "react-icons/bi";
 import logo from "../../../assets/Logo.png";
 import NavList from "./List/NavList";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+
 const Header = () => {
+  const { cart } = useContext(CartContext);
   return (
     <header className="sm:flex items-center justify-around py-6 gap-24 px-12 hidden sticky top-0 bg-[#EFF6F1] drop-shadow z-50">
       <Link to="/" className="flex items-center justify-center gap-1">
@@ -21,11 +25,14 @@ const Header = () => {
             id=""
           />
         </div>
-        <div className="hidden">
-          <button className="flex justify-center items-center gap-2 border-2  rounded-full px-1 py-1 font-semibold">
+        <div className="">
+          <Link
+            to="/cart"
+            className="flex justify-center items-center gap-2 border-2  rounded-full px-1 py-1 font-semibold"
+          >
             <AiOutlineShoppingCart className="text-3xl text-white font-extrabold bg-[#274C5B] rounded-full p-1" />
-            <span>Cart 0</span>
-          </button>
+            <span>Cart {cart.length}</span>
+          </Link>
         </div>
         <div>
           <Link

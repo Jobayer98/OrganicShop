@@ -9,7 +9,7 @@ import { ProductContext } from "../../../context/ProductContext";
 
 const Product = () => {
   useFetch("/products?limit=4");
-  const { products, loading, error } = useContext(ProductContext);
+  const { products, loading } = useContext(ProductContext);
 
   if (loading) {
     return <h1 className="text-black">Loading...</h1>;
@@ -23,7 +23,6 @@ const Product = () => {
           Our New Products
         </h3>
       </div>
-      {error && <h1>Something went wrong</h1>}
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {products &&
           products.map((product, i) => (
