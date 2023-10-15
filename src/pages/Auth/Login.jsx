@@ -11,7 +11,7 @@ function Login() {
   const { register, handleSubmit } = useForm();
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.form?.pathname || "/user/profile";
+  const from = location.state?.from?.pathname || "/";
   const onSubmit = async (data) => {
     try {
       setLoding(true);

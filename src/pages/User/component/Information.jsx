@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../../context/Usercontext";
+import { UserContext } from "../../../context/UserContext";
 import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
 

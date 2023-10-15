@@ -25,13 +25,13 @@ const Product = () => {
       </div>
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {products &&
-          products.map((product, i) => (
-            <Card key={i} img={img} item={product} />
+          products.map((product) => (
+            <Card key={product._id} img={img} item={product} />
           ))}
       </div>
       <div className="flex justify-center mt-8">
         <Link
-          to="/about"
+          to="#"
           className="bg-[#274c5b] text-white flex justify-center items-center w-[150px] mt-8 py-2 rounded-md"
         >
           Explore Now{" "}

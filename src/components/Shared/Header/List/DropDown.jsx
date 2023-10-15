@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const DropDown = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [isNestedDropdownOpen, setNestedDropdownOpen] = useState(false);
+  // const [isNestedDropdownOpen, setNestedDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const toggleNestedDropdown = () => {
-    setNestedDropdownOpen(!isNestedDropdownOpen);
-  };
+  // const toggleNestedDropdown = () => {
+  //   setNestedDropdownOpen(!isNestedDropdownOpen);
+  // };
 
   return (
     <div className="relative inline-block text-left">
@@ -27,21 +28,30 @@ const DropDown = () => {
       {isDropdownOpen && (
         <div className="origin-top-right absolute right-0 mt-2 w-48 shadow-lg bg-white ring-1 ring-black ring-opacity-5 text-base font-normal">
           <div className="py-1">
-            <a
-              href="#"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Item 1
-            </a>
-            <a
-              href="#"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Item 2
-            </a>
+            <li className="border-b-2 py-1 pl-3">
+              <Link to="/category/honey">Honey</Link>
+            </li>
+            <li className="border-b-2 py-1 pl-3">
+              <Link to="/category/ghee">Ghee</Link>
+            </li>
+            <li className="border-b-2 py-1 pl-3">
+              <Link to="/category/oil">Oil</Link>
+            </li>
+            <li className="border-b-2 py-1 pl-3">
+              <Link to="/category/fruit">Fruits</Link>
+            </li>
+            <li className="border-b-2 py-1 pl-3">
+              <Link to="/category/nuts">Nuts & Seeds</Link>
+            </li>
+            <li className="border-b-2 py-1 pl-3">
+              <Link to="/category/tea">Tea & Snacks</Link>
+            </li>
+            <li className="py-1 pl-3">
+              <Link to="/category/spices">Spices</Link>
+            </li>
 
             {/* Nested Dropdown */}
-            <div className="relative group">
+            {/* <div className="relative group">
               <a
                 href="#"
                 className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
@@ -65,15 +75,8 @@ const DropDown = () => {
                   </a>
                 </div>
               )}
-            </div>
+            </div> */}
             {/* End Nested Dropdown */}
-
-            <a
-              href="#"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Item 3
-            </a>
           </div>
         </div>
       )}

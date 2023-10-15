@@ -108,16 +108,13 @@ const ShoppingCart = () => {
                 </div>
               </div>
               <Link
-                to="/payment"
+                to="/checkout"
                 className="bg-[#274C5B] text-white text-lg text-center font-medium py-3 rounded w-full"
               >
                 Checkout
               </Link>
             </div>
           </div>
-
-          {/* suggest product */}
-          {/* <SuggestProduct /> */}
         </section>
       ) : (
         <p className="flex justify-center mt-32 text-xl">No items in cart</p>

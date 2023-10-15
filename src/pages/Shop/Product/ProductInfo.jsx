@@ -98,7 +98,7 @@ const ProductInfo = () => {
                 $20.00
               </strike>
             </span>{" "}
-            ${15}
+            ${product?.price}
           </p>
         </div>
         <p className="2xl:w-[80%]">{product?.description}</p>

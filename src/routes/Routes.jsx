@@ -11,11 +11,14 @@ import Profile from "../pages/User/Profile";
 import PrivateRoute from "./PrivateRoute";
 import ShoppingCart from "../pages/Cart/ShoppingCart";
 import UpdateProfile from "../pages/User/UpdateProfile";
+import Checkout from "../pages/Order/Checkout";
+import Error from "../pages/Error/Error";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -36,6 +39,14 @@ export const router = createBrowserRouter([
       {
         path: "/our-team",
         element: <Team />,
+      },
+      {
+        path: "/checkout",
+        element: (
+          <PrivateRoute>
+            <Checkout />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/user/profile",
