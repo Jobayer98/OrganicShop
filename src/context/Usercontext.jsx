@@ -18,7 +18,11 @@ const UserProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const res = await axios.get("/logout");
+      await axios.get("/logout", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
       setUser(null);
     } catch (error) {
       console.log(error);

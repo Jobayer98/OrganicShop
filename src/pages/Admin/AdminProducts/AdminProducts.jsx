@@ -25,7 +25,11 @@ const AdminProducts = () => {
     (async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get("/admin/products");
+        const { data } = await axios.get("/admin/products", {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
         setProducts(data.data);
         setLoading(false);
       } catch (error) {
