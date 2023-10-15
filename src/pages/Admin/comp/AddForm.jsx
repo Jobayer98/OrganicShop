@@ -3,12 +3,14 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import axios from "../../../utils/axios";
 import { ProductContext } from "../../../context/ProductContext";
+import { useNavigate } from "react-router-dom";
 
 const notify = () => toast.success("Product added successfully");
 const AddForm = () => {
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit } = useForm();
   const { setProduct } = useContext(ProductContext);
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     const productInfo = {
@@ -27,6 +29,7 @@ const AddForm = () => {
       if (response.data) {
         notify();
         setProduct(response.data.data);
+        navigate("/admin/products");
         setLoading(false);
       }
     } catch (error) {

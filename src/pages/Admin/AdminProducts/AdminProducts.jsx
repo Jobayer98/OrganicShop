@@ -5,6 +5,7 @@ import { ProductContext } from "../../../context/ProductContext.jsx";
 const AdminProducts = () => {
   useFetch("/admin/products");
   const { products } = useContext(ProductContext);
+  console.log(products);
   return (
     <div>
       <h2 className="text-center text-2xl my-6">AdminProducts</h2>
