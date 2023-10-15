@@ -2,7 +2,7 @@ import { useState, createContext } from "react";
 
 export const ProductContext = createContext({
   products: [],
-  setProducts: () => {},
+  setProduct: () => {},
   loading: false,
   setLoading: () => {},
   error: false,
@@ -10,13 +10,13 @@ export const ProductContext = createContext({
 });
 
 const ProductProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
   return (
     <ProductContext.Provider
-      value={{ products, loading, error, setProducts, setLoading, setError }}
+      value={{ products, loading, error, setProduct, setLoading, setError }}
     >
       {children}
     </ProductContext.Provider>

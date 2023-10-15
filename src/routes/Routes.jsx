@@ -14,6 +14,7 @@ import UpdateProfile from "../pages/User/UpdateProfile";
 import Checkout from "../pages/Order/Checkout";
 import Error from "../pages/Error/Error";
 import AdminProducts from "../pages/Admin/AdminProducts/AdminProducts";
+import AddProduct from "../pages/Admin/AdminProducts/AddProduct";
 
 export const router = createBrowserRouter([
   {
@@ -67,7 +68,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/admin/products",
-        element: <AdminProducts />,
+        element: (
+          <PrivateRoute>
+            <AdminProducts />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/admin/add-product",
+        element: (
+          <PrivateRoute>
+            <AddProduct />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/cart",
