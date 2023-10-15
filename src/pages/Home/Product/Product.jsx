@@ -8,9 +8,8 @@ import { useContext } from "react";
 import { ProductContext } from "../../../context/ProductContext";
 
 const Product = () => {
-  useFetch("/products");
+  useFetch("/products?limit=4");
   const { products, loading, error } = useContext(ProductContext);
-  products.length = 4;
 
   if (loading) {
     return <h1 className="text-black">Loading...</h1>;

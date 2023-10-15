@@ -10,9 +10,10 @@ const useFetch = (urlPath) => {
       setLoading(true);
       try {
         const res = await axios.get(urlPath);
-        setProducts(res.data);
+        setProducts(res.data.data);
         setLoading(false);
       } catch (error) {
+        setProducts([]);
         setError(error);
         setLoading(false);
       }

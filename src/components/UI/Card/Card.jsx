@@ -26,7 +26,13 @@ const Card = ({ item, img }) => {
             ${item?.price}
           </p>
           <p>
-            <Rating size="small" name="read-only" value={5} readOnly />
+            <Rating
+              size="small"
+              name="half-rating-read"
+              defaultValue={item?.rating}
+              precision={0.5}
+              readOnly
+            />
           </p>
         </div>
       </div>

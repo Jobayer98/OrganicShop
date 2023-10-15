@@ -15,8 +15,12 @@ const Products = () => {
     return <h1>Loading...</h1>;
   }
 
-  if (error) {
-    return <h1>Something went wrong</h1>;
+  if (error.status === 404) {
+    return (
+      <h1 className="text-black text-xl text-center mt-16">
+        {error.response.data.msg}
+      </h1>
+    );
   }
 
   return (
