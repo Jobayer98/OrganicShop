@@ -13,6 +13,7 @@ import ShoppingCart from "../pages/Cart/ShoppingCart";
 import UpdateProfile from "../pages/User/UpdateProfile";
 import Checkout from "../pages/Order/Checkout";
 import Error from "../pages/Error/Error";
+import AdminProducts from "../pages/Admin/AdminProducts/AdminProducts";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
             <UpdateProfile />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/admin/products",
+        element: <AdminProducts />,
       },
       {
         path: "/cart",
