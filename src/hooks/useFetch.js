@@ -3,17 +3,17 @@ import axios from "../utils/axios";
 import { ProductContext } from "../context/ProductContext";
 
 const useFetch = (urlPath) => {
-  const { setProducts, setLoading, setError } = useContext(ProductContext);
+  const { setProduct, setLoading, setError } = useContext(ProductContext);
 
   useEffect(() => {
     (async () => {
       setLoading(true);
       try {
         const res = await axios.get(urlPath);
-        setProducts(res.data.data);
+        setProduct(res.data.data);
         setLoading(false);
       } catch (error) {
-        setProducts([]);
+        setProduct([]);
         setError(error);
         setLoading(false);
       }

@@ -8,6 +8,7 @@ export const UserContext = createContext({
 });
 
 import { useState } from "react";
+import axios from "../utils/axios";
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
@@ -15,8 +16,13 @@ const UserProvider = ({ children }) => {
     setUser(data);
   };
 
-  const logout = () => {
-    setUser(null);
+  const logout = async () => {
+    try {
+      const res = await axios.get("/logout");
+      setUser(null);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const userInfo = {

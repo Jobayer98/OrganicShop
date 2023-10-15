@@ -1,6 +1,10 @@
-import React from "react";
+import { useContext, useState } from "react";
+import useFetch from "../../../hooks/useFetch.js";
+import { ProductContext } from "../../../context/ProductContext.jsx";
 
 const AdminProducts = () => {
+  useFetch("/admin/products");
+  const { products } = useContext(ProductContext);
   return (
     <div>
       <h2 className="text-center text-2xl my-6">AdminProducts</h2>
@@ -16,11 +20,11 @@ const AdminProducts = () => {
               </tr>
             </thead>
             <tbody>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
-                <tr key={index}>
+              {products.map((product, index) => (
+                <tr key={product._id}>
                   <th>{index + 1}</th>
-                  <td>Cy Ganderton</td>
-                  <td>Available</td>
+                  <td>{product?.productName}</td>
+                  <td>{product?.stock}</td>
                 </tr>
               ))}
             </tbody>

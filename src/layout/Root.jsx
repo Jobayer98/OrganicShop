@@ -7,7 +7,7 @@ const Root = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="flex-1">
         <Outlet>
           <HomePage />
         </Outlet>

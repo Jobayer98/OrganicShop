@@ -22,9 +22,7 @@ const UserDropdown = () => {
         <Link to={"/user/points"} className="p-4 border-b block">
           My Points
         </Link>
-        <button onClick={handleLogout} className="p-4 block">
-          Logout
-        </button>
+
         {user?.role === "admin" && (
           <span>
             <Link to={"/admin/products"} className="p-4 border-b block">
@@ -33,11 +31,11 @@ const UserDropdown = () => {
             <Link to={"/admin/add-product"} className="p-4 border-b block">
               Add Product
             </Link>
-            <Link to={"/admin/analytic"} className="p-4 block">
-              Analylict
-            </Link>
           </span>
         )}
+        <button onClick={handleLogout} className="p-4 block">
+          Logout
+        </button>
       </div>
     </div>
   );
