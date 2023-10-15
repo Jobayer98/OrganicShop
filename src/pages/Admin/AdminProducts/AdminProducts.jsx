@@ -1,12 +1,25 @@
 import { useEffect, useState } from "react";
 import axios from "../../../utils/axios.js";
-import { AiOutlineEdit } from "react-icons/ai";
+import { AiFillDelete, AiOutlineEdit } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const AdminProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
+  const handleDleteProduct = async (id) => {
+    try {
+      await axios.delete(`/admin/product/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      setProducts(products.filter((product) => product._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     (async () => {
@@ -41,7 +54,8 @@ const AdminProducts = () => {
                 <th>Total Product</th>
                 <th>Name</th>
                 <th>Stock</th>
-                <th>Update</th>
+                <th>Update Product</th>
+                <th>Delete Product</th>
               </tr>
             </thead>
             <tbody>
@@ -58,6 +72,15 @@ const AdminProducts = () => {
                     >
                       <AiOutlineEdit />
                     </Link>
+                  </td>
+                  <td>
+                    <button
+                      onClick={() => handleDleteProduct(product._id)}
+                      className="tooltip"
+                      data-tip="Delete"
+                    >
+                      <AiFillDelete />
+                    </button>
                   </td>
                 </tr>
               ))}

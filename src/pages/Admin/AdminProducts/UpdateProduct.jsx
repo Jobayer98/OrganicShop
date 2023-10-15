@@ -24,16 +24,12 @@ const UpdateProduct = () => {
 
     setLoading(true);
     try {
-      const response = await axios.patch(
-        `/admin/product/update/${id}`,
-        productInfo,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
+      const response = await axios.patch(`/admin/product/${id}`, productInfo, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
       if (response.data) {
         notify();
         navigate("/admin/products");
